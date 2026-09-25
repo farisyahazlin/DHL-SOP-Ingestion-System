@@ -56,35 +56,38 @@ DHL-SOP-Ingestion-System/
     ├── Main.xaml              # Primary RPA process sequence
     └── project.json           # UiPath project configuration
 
-
+```
 🚀 Getting Started
 1. Database Setup
-    Ensure your local MongoDB service is active:
-   
-        net start MongoDB
-   
-3. Backend Setup (dhl-backend)
-    Navigate to the backend directory, install dependencies, and start the server:
+Ensure your local MongoDB service is active:
+```
+   net start MongoDB
+```
 
-        cd dhl-backend
-        npm install
-        node server.js
-   
-    The backend API will start at http://localhost:3000 and display SUCCESS: Connected cleanly to MongoDB (dhl_ops_db).
+2. Backend Setup (dhl-backend)
+Navigate to the backend directory, install dependencies, and start the server:
+```
+   cd dhl-backend
+   npm install
+   node server.js
+```
+The backend API will start at http://localhost:3000 and display SUCCESS: Connected cleanly to MongoDB (dhl_ops_db).
+
 
 3. Frontend Setup (dhl-app)
-    Open a new terminal, navigate to the frontend directory, install dependencies, and start the Vue development server:
+Open a new terminal, navigate to the frontend directory, install dependencies, and start the Vue development server:
+```
+cd dhl-app
+npm install
+npm run serve
+```
+Access the operational portal in your browser at http://localhost:8080.
 
-        cd dhl-app
-        npm install
-        npm run serve
-   
-   Access the operational portal in your browser at http://localhost:8080.
 
 4. UiPath Execution (DHL_SOP_Ingestion_Robot)
     1) Open UiPath Studio and load DHL_SOP_Ingestion_Robot.
     2) Ensure Main.xaml points to your active input directory containing sample SOP text files.
-    3) Verify the HTTP Request activity endpoint is targeted to http://localhost:3000/api/articles
+    3) Verify the HTTP Request activity endpoint is targeted to http://localhost:3000/api/articles.
     4) Click Run or Debug.
 
 
