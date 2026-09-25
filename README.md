@@ -36,7 +36,9 @@ The project is structured into four distinct, loosely coupled architectural tier
   * Vue CLI (@vue/cli)
   * UiPath Studio Community Edition
 
-📁 Repository Structure
+## 📁 Repository Structure
+
+```text
 DHL-SOP-Ingestion-System/
 ├── dhl-backend/               # Tier 3 & Tier 4 (Express & Database integration)
 │   ├── models/                # MongoDB Mongoose schemas
@@ -54,7 +56,8 @@ DHL-SOP-Ingestion-System/
     ├── Main.xaml              # Primary RPA process sequence
     └── project.json           # UiPath project configuration
 
- 🚀 Getting Started
+
+🚀 Getting Started
 1. Database Setup
     Ensure your local MongoDB service is active:
    
