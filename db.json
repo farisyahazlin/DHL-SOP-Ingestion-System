@@ -1,0 +1,53 @@
+{
+  "articles": [
+    {
+      "id": "SOP-001",
+      "title": "Urgent: Red-Zone Delivery Safety",
+      "source": "MS Teams",
+      "status": "High"
+    },
+    {
+      "id": "SOP-002",
+      "title": "Standard Customs Clearance Protocol",
+      "source": "Email",
+      "status": "Normal"
+    },
+    {
+      "id": "EPBOCRjUWmY",
+      "title": "Air Freight Delay Contingency PlanAir Freight Delay Contingency Plan",
+      "source": "Manual",
+      "status": "High"
+    },
+    {
+      "id": "ng7jKHnMYS0",
+      "title": "Emergency Airport Customs Server Downtime Protocol",
+      "source": "Manual",
+      "status": "High"
+    },
+    {
+      "id": "qf-gfLWN8Po",
+      "title": "End-of-Month Discrepancy Reconciliation Audit",
+      "source": "Manual",
+      "status": "Normal"
+    },
+    {
+      "id": "GpduIEsxgdQ",
+      "title": "Updated Dangerous Goods (Hazmat) Labeling Guide",
+      "source": "Manual",
+      "status": "Normal"
+    },
+    {
+      "id": "i9jW5z2IpiQ",
+      "title": "Emergency Forklift Battery Charging Safety Protocol Hub A",
+      "source": "Manual",
+      "status": "High"
+    },
+    {
+      "id": "VUvEBNniAXY",
+      "title": "End-of-Day Cross-Docking Manifest Discrepancy Routine",
+      "source": "Manual",
+      "status": "Normal"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
