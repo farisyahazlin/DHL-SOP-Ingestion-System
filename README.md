@@ -5,49 +5,36 @@ A full-stack 4-Tier Automated SOP Ingestion System built with UiPath RPA, Expres
 
 An automated, end-to-end Standard Operating Procedure (SOP) ingestion, validation, and monitoring platform built for logistics knowledge base management. The system processes raw SOP documentation via Robotic Process Automation (RPA), transforms and validates payload structures via a central REST gateway, and streams live operational updates to an enterprise administrative portal.
 
-🏗️ System Architecture
+## 🏗️ System Architecture
+
 The project is structured into four distinct, loosely coupled architectural tiers:
 
-Tier 1: Automation Engine (UiPath RPA)
+* **Tier 1: Automation Engine (UiPath RPA)**
+  * Handles local filesystem directory watching for raw SOP inputs (`.txt`/`.pdf`).
+  * Automates text extraction, whitespace normalization, and duplicate-screening logic.
+  * Dispatches structured JSON payloads to the REST gateway via HTTP POST.
 
-Handles local filesystem directory watching for raw SOP inputs (.txt/.pdf).
+* **Tier 2: Frontend Client (Vue.js)**
+  * Serves an interactive operational management UI at `http://localhost:8080/`.
+  * Provides real-time visibility into incoming SOP records, status filters, and global logistics metrics.
+  * Features secure user authentication interfaces.
 
-Automates text extraction, whitespace normalization, and duplicate-screening logic.
+* **Tier 3: REST API Gateway (Node.js & Express)**
+  * Runs on `http://localhost:3000/api/articles`.
+  * Handles request validation, routing, error handling, and business logic execution.
+  * Facilitates secure database transactions.
 
-Dispatches structured JSON payloads to the REST gateway via HTTP POST.
-
-Tier 2: Frontend Client (Vue.js)
-
-Serves an interactive operational management UI at http://localhost:8080/.
-
-Provides real-time visibility into incoming SOP records, status filters, and global logistics metrics.
-
-Features secure user authentication interfaces.
-
-Tier 3: REST API Gateway (Node.js & Express)
-
-Runs on http://localhost:3000/api/articles.
-
-Handles request validation, routing, error handling, and business logic execution.
-
-Facilitates secure database transactions.
-
-Tier 4: Persistence Layer (MongoDB)
-
-Database: dhl_ops_db
-
-Stores standardized SOP documents, audit logs, and status records in dedicated collections (articles).
+* **Tier 4: Persistence Layer (MongoDB)**
+  * Database: `dhl_ops_db`
+  * Stores standardized SOP documents, audit logs, and status records in dedicated collections (`articles`).
+ 
 
 🛠️ Tech Stack & Prerequisites
-Node.js (v16.x or higher)
-
-npm (v8.x or higher)
-
-MongoDB Community Server (Running locally on default port 27017)
-
-Vue CLI (@vue/cli)
-
-UiPath Studio Community Edition
+  * Node.js (v16.x or higher)
+  * npm (v8.x or higher)
+  * MongoDB Community Server (Running locally on default port 27017)
+  * Vue CLI (@vue/cli)
+  * UiPath Studio Community Edition
 
 📁 Repository Structure
 DHL-SOP-Ingestion-System/
